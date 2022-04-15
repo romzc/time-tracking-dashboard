@@ -1,0 +1,227 @@
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --light-red--work:hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --soft-orange-care: hsl(43, 84%, 65%);
+
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desatured-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --font-card-titles: 18px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: var(--very-dark-blue);
+    padding: 4rem 1.4rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-blue);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.header--info {
+    background-color: var(--blue);
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    padding: 2rem 1.6rem;
+    border-radius: 12px;
+    color: var(--pale-blue);
+}
+
+.header--photo {
+    object-fit: contain;
+    width: 3.8rem;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.header--name  {
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+}
+
+.header--name span {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+
+.header--selection-options {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.header--selection-options li {
+    display: block;
+    margin-top: 1.2rem;
+    min-height: 2.2rem;
+    color: var(--desatured-blue);
+    cursor: pointer;
+}
+
+
+.card {
+    margin-top: 16px;
+    border-radius: 12px;
+    min-height: 160px;
+    display: flex;
+    overflow: hidden;
+}
+
+.card:nth-child(1) {
+    background-color: var(--light-red--work);
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.card:nth-child(2) {
+    background-color: var(--soft-blue-play);
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.card:nth-child(3) {
+    background-color: var(--light-red-study);
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.card:nth-child(4) {
+    background-color: var(--lime-green-exercise);
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.card:nth-child(5) {
+    background-color: var(--violet-social);
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.card:nth-child(6) {
+    background-color: var(--soft-orange-care);
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 124px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: var(--dark-blue);
+    align-self: flex-end;
+    justify-content: center;
+    padding: 0 1.4rem;
+    color: var(--pale-blue);
+}
+
+.card--job-icon {
+    display: flex;
+    align-items: center;
+}
+
+.card--job {
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.card--week {
+    display: flex;
+    align-items: center;
+}
+
+.card--time {
+    margin-right: auto;
+    font-weight: 400;
+}
+
+.header--selection-options li:hover {
+    color: whitesmoke;
+}
+
+.header--selection-options li:target {
+    color: whitesmoke;
+    opacity: 0.6;
+}
+
+@media(min-width:700px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+    }
+
+    #root {
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        gap: 32px;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        margin: 0;
+        min-width: 12rem;
+    }
+
+    .card--week {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header--info {
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .header--selection-options {
+        flex-direction: column;
+        column-gap: 0;
+        margin-top: 12px;
+        margin-left: 16px;
+    }
+
+    .header--selection-options li {
+        margin: 0;
+    }
+}

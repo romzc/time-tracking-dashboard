@@ -1,8 +1,9 @@
+import Profile from "./Profile"
 
 const App = () => {
     return (
         <>
-        
+            <Profile />
         </>
     )
 }
